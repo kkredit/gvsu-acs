@@ -1,0 +1,53 @@
+<project  default='jar'>
+	<property name='build' value='bin'/>
+
+    <target name="clean">
+        <delete dir="${build}"/>
+    </target>
+
+    <target name='compile'>
+        <mkdir dir="${build}"/>
+        <javac includeantruntime="false" srcdir="src" destdir="${build}"/>
+        <!--rmic classname="edu.gvsu.cis.cis656.lab1.MyPresenceServiceImpl" base="${build}"/-->
+    </target>
+
+    <target name="jar" depends='compile'>
+        <jar destfile="chat-client.jar" basedir="${build}">
+            <manifest>
+                <attribute name="Main-Class" value="client.ChatClient"/>
+            </manifest>
+        </jar>
+        <jar destfile="presence-server.jar" basedir="${build}">
+            <manifest>
+                <attribute name="Main-Class" value="server.PresenceServiceImpl"/>
+            </manifest>
+        </jar>
+    </target>
+
+<!-- Usage: ant run-presence-server -Dport=1099 -->
+		<target name='run-presence-server' depends='jar'>
+				<java  jar="presence-server.jar" fork="true">
+                        <arg value="${port}"/>
+						<sysproperty key="java.security.policy" value="policy"/>
+						<sysproperty key="java.rmi.server.useCodebaseOnly" value="false"/>
+				</java>
+		</target>
+
+<!-- Usage: ant run-client -Dname=fred -Dhost=host.port -->
+		<target name='run-chat-client' depends='jar'>
+				<java  jar="chat-client.jar" fork="true">
+                        <arg value="${name}"/>
+						<arg value="${host}"/>
+						<sysproperty key="java.security.policy" value="policy"/>
+						<sysproperty key="java.rmi.server.useCodebaseOnly" value="false"/>
+				</java>
+		</target>
+
+<!-- Usage: ant run-rmiregistry -Dport=1099 -->
+		<target name='run-rmiregistry' depends='compile'>
+				<exec executable="./runrmi.sh">
+                    <arg value="${port}"/>
+					<arg value="-J-Djava.rmi-server.useCodebaseOnly=false"/>
+				</exec>
+		</target>
+</project>

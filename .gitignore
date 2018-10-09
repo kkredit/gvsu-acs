@@ -1,0 +1,22 @@
+# IntelliJ
+.idea/
+
+# Build objects
+out/
+bin/
+*.class
+*.jar
+*.out
+
+# SQLplus login script
+startOracleSql.sh
+
+# Windows stuff
+*.ini
+
+# Vim
+*.un~
+*.swp
+
+# Other
+workspace/
