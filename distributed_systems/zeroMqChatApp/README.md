@@ -1,4 +1,7 @@
 
+## First...
+Can you tell my main language is C? :)
+
 # Background
 
 This project is a sequel. In the original, we implemented a chat application using Java RMI for
