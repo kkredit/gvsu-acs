@@ -4,6 +4,7 @@
 # Build objects
 out/
 bin/
+target/
 *.class
 *.jar
 *.out
