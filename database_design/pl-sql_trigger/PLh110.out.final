@@ -1,0 +1,88 @@
+SQL> --
+SQL> -- Kevin Kredit
+SQL> --
+SQL> -- Testing the trigger for UPDATE
+SQL> --
+SQL> -- (1)
+SQL> UPDATE Sailors SET trainee=95 where sid=85;
+
+1 row updated.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> -- (2)
+SQL> UPDATE Sailors SET trainee=71 where sid=64;
+UPDATE Sailors SET trainee=71 where sid=64
+       *
+ERROR at line 1:
+ORA-20001: +++++INSERT or UPDATE rejected. trainee..22..is a LogKeeper 
+ORA-06512: at "KREDITK.BIC5_TB", line 17 
+ORA-04088: error during execution of trigger 'KREDITK.BIC5_TB' 
+
+
+SQL> commit;
+
+Commit complete.
+
+SQL> -- (3)
+SQL> UPDATE Sailors SET trainee=31 where sid=58;
+
+1 row updated.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> --
+SQL> -- Testing the trigger for DELETE
+SQL> --
+SQL> -- (4)
+SQL> DELETE FROM Sailors where sid=74;
+
+1 row deleted.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> -- (5)
+SQL> DELETE FROM Sailors where sid=22;
+DELETE FROM Sailors where sid=22
+            *
+ERROR at line 1:
+ORA-20001: +++++INSERT or UPDATE rejected. trainee..22..is a LogKeeper 
+ORA-06512: at "KREDITK.BIC5_TB", line 17 
+ORA-04088: error during execution of trigger 'KREDITK.BIC5_TB' 
+
+
+SQL> commit;
+
+Commit complete.
+
+SQL> --
+SQL> -- (6)
+SQL> -- Inspect the database
+SQL> SELECT * FROM Sailors order by sid;
+
+       SID SNAME               RATING        AGE    TRAINEE                     
+---------- --------------- ---------- ---------- ----------                     
+        22 Dave                     7         45         85                     
+        29 Mike                     1         33                                
+        31 Mary                     8         55         85                     
+        32 Albert                   8         25         31                     
+        58 Jim                     10         35         31                     
+        64 Jane                     7         35         22                     
+        71 Dave                    10         16         32                     
+        85 Art                      3         25         95                     
+        95 Jane                     3         63                                
+
+9 rows selected.
+
+SQL> -- Drop the trigger
+SQL> Drop Trigger bIC5_TB;
+
+Trigger dropped.
+
+SQL> SET ECHO OFF
