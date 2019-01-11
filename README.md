@@ -13,8 +13,10 @@ The class names correspond to the following GVSU CIS course numbers:
 
 | Name | Course # |
 |------|----------|
-| database_design | 673 |
+| security_privacy | 616 |
 | distributed_systems | 656 |
+| web_development | 658 |
+| database_design | 673 |
 
 ## Why branch `main` instead of `master`?
 
