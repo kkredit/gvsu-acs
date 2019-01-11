@@ -1,7 +1,7 @@
 
 # CIS 673 Project
 
-(This repo)[https://github.com/kkredit/cis673-database-project]
+[This repo](https://github.com/kkredit/cis673-database-project)
 contains code for the GVSU CIS 673 course project. CIS 673 is
 Intro to Database Design, and this project is a simple database implemented
 using Oracle's SQLplus DBMS.
