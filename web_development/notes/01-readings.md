@@ -13,9 +13,12 @@ Your answers are not due for credit; but, be prepared to discuss the articles in
 (You will need to be logged into the GVSU library in order to access this article's full text.)
 - [HTTP: The protocol Ever Web Developer Must Know](https://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177)
 - [Progressive Web App Video](https://developers.google.com/web/progressive-web-apps/)
+(focus on first 8 minutes)
 - [Responsive Web Design](https://alistapart.com/article/responsive-web-design)
 - Chapters 1 and 4 in this [Free IBM ebook](http://www.redbooks.ibm.com/pubs/pdfs/redbooks/gg243376.pdf)
 (This should be review from CIS 654.)
+- [Stack Overflow article about URIs, URLs and
+  URNs](https://stackoverflow.com/questions/176264/what-is-the-difference-between-a-uri-a-url-and-a-urn)
 
 ## Questions
 
@@ -67,4 +70,26 @@ Have not:
 From 62 to 829 servers.
 
 1. What does it mean for HTTP to be a "stateless" protocol?
+
+Every request-response pair is independent. The server does not track or make assumptions about the
+state of the client. This does not mean that the server itself does not have state. It also is
+referring to its level of abstraction only--TCP connections have state, but that is unrelated to
+HTTP state.
+
 1. What is responsive web design?
+
+Responsive web design means making a web page that automatically suits itself to whatever
+environment that renders it. If it is a small screen with a touch interface, reduce the number of
+columns and increase the click hit-box, for example. It makes it so that you don't need separate
+mobile and desktop webistes.
+
+1. What is a Progressive Web App?
+
+TODO TODO TODO
+
+1. What is the difference between a URI and a URL?
+
+A URI is a Uniform Resource Identifier, while a URL is a .. Locator. The historical difference is
+that a URL includes the means for acquiring the object identified by the URI--that is, it includes
+the protocol. URLs are then a subset of URIs. Due to the mass confusion on the subject, recent RFCs
+have declared URI and URL to be synonymous.
