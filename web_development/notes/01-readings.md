@@ -85,7 +85,10 @@ mobile and desktop webistes.
 
 #### 11. What is a Progressive Web App?
 
-TODO TODO TODO
+A Progressive Web App is a website that offers native-app-like performance and experience using
+"service workers" that cache pages so that they work without a network connection, home screen
+integration and browser hiding so they _look_ like apps, and web notification capabilities so they
+can alert you like apps.
 
 #### 12. What is the difference between a URI and a URL?
 
