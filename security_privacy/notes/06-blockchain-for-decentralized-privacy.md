@@ -1,5 +1,5 @@
 
-# Case Study: The Home Depot Data Breach
+# Case Study: Decentralizing Privacy: Using Blockchain to Protect Personal Data
 From the IEEE CS Security and Privacy Workshops. See original
 [here](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7163223).
 From 2015.
