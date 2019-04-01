@@ -4,6 +4,8 @@ From the IEEE CS Security and Privacy Workshops. See original
 [here](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7163223).
 From 2015.
 
+See presentation slides in similarly-named PDF.
+
 ## I. Introduction
 - Related work
   - See OpenPDS (PDS = personal data store); only answers, no raw data sent
