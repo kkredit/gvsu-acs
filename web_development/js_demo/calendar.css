@@ -1,0 +1,28 @@
+
+caption {
+  font-family: "Veranda";
+  font-size: 20pt;
+  margin: 0.5em;
+}
+
+#calendarTable {
+  border: 1px solid black;
+  background-color: AliceBlue;
+  table-layout: fixed;
+  width: 500px;
+}
+
+#calendarTable td {
+  border: 2px solid blue;
+  text-align: center;
+  font-family: "Veranda";
+  font-style: italic;
+}
+
+#calendarTable  {
+  column-width: 30px;
+}
+
+#leftArrow, #rightArrow {
+  width: 40px;
+}

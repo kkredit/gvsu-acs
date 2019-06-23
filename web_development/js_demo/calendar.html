@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Calendar</title>
+    <link rel="stylesheet" type="text/css" href="calendar.css"/>
+    <script type="text/javascript" src="calendar.js"></script>
+</head>
+<body>
+
+
+<table>
+    <tr>
+        <td><img id="leftArrow" src="LArrow.png" onclick="goLastMonth()"/></td>
+
+        <td>
+            <table id="calendarTable">
+                <caption>
+                  <span id="monthHeader">April</span>
+                  <span id="yearHeader">2019</span>
+                </caption>
+                <tr>
+                    <th>Sunday</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+        </td>
+        <td><img id="rightArrow" src="RArrow.png" onclick="goNextMonth()"/></td>
+</table>
+
+<form id="the_form">
+    <table>
+        <tr>
+            <td>Month:</td>
+            <td>
+              <select id="form_month" name="month">
+                <option value=0>January</option>
+                <option value=1>February</option>
+                <option value=2>March</option>
+                <option value=3>April</option>
+                <option value=4>May</option>
+                <option value=5>June</option>
+                <option value=6>July</option>
+                <option value=7>August</option>
+                <option value=8>September</option>
+                <option value=9>October</option>
+                <option value=10>November</option>
+                <option value=11>December</option>
+                </option>
+              </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Year:</td>
+            <td>
+              <input id="form_year" type="number" value=2019/>
+            </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <input type="button" value="Submit" onclick="updateCal()"/>
+          </td>
+        </tr>
+    </table>
+</form>
+
+
+<script>
+
+    var today = new Date();
+    var thisMonth = new Date(today.getFullYear(), today.getMonth());
+    update(thisMonth);
+
+    function updateCal() {
+      // show the current month.
+      var month = 0 + document.getElementById("form_month").selectedIndex;
+      var year = Number(document.getElementById("form_year").value);
+      var date = new Date(year, month);
+      update(date);
+    }
+
+</script>
+
+
+</body>
+</html>
