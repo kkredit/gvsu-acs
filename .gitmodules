@@ -16,3 +16,12 @@
 [submodule "web_development/rails-blog-bootstrap"]
 	path = web_development/rails-blog-bootstrap
 	url = https://github.com/kkredit/rails-blog-fancy
+[submodule "database_design/cumulative_project"]
+	path = database_design/cumulative_project
+	url = https://github.com/kkredit/cis673-database-project
+[submodule "web_development/slp-therapy-tracker-react"]
+	path = web_development/slp-therapy-tracker-react
+	url = https://github.com/kkredit/slp-therapy-tracker
+[submodule "web_development/slp-therapy-tracker-rails"]
+	path = web_development/slp-therapy-tracker-rails
+	url = https://github.com/kkredit/slp-therapy-tracker-backend
