@@ -7,3 +7,12 @@
 [submodule "mobile_app_dev/MQTT_Sweeper_Android"]
 	path = mobile_app_dev/MQTT_Sweeper_Android
 	url = https://github.com/kkredit/MQTT-sweeper-android
+[submodule "web_development/rails-bugtracker"]
+	path = web_development/rails-bugtracker
+	url = https://github.com/kkredit/ruby-bugs
+[submodule "web_development/react-bugtracker-frontend"]
+	path = web_development/react-bugtracker-frontend
+	url = https://github.com/kkredit/ruby-bugs-react
+[submodule "web_development/rails-blog-bootstrap"]
+	path = web_development/rails-blog-bootstrap
+	url = https://github.com/kkredit/rails-blog-fancy
