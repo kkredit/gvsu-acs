@@ -1,3 +1,9 @@
 [submodule "mobile_app_dev/Android_Geocalc"]
 	path = mobile_app_dev/Android_Geocalc
 	url = https://github.com/Brinjenga/Andoid_GeoCalc
+[submodule "mobile_app_dev/iOS_Geocalc"]
+	path = mobile_app_dev/iOS_Geocalc
+	url = https://github.com/kkredit/IOS_GeoCalc
+[submodule "mobile_app_dev/MQTT_Sweeper_Android"]
+	path = mobile_app_dev/MQTT_Sweeper_Android
+	url = https://github.com/kkredit/MQTT-sweeper-android
