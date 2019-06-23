@@ -15,6 +15,7 @@ The class names correspond to the following GVSU CIS course numbers:
 |------|----------|
 | security_privacy | 616 |
 | distributed_systems | 656 |
+| mobile_app_dev | 657 |
 | web_development | 658 |
 | database_design | 673 |
 
