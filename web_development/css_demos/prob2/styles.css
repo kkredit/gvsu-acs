@@ -1,0 +1,22 @@
+#topleft {position: absolute; top: default; margin-left: 5px;}
+#bottomleft {position: absolute; bottom: 0; margin-left: 5px;}
+#topright {position: absolute; top: default; right: 5px; text-align: right;}
+#bottomright {position: absolute; bottom: 0; right: 5px; text-align: right;}
+
+.centered_green_box {
+  position: absolute;
+  left: calc(50% - 50px);
+  top: calc(50% - 50px);
+  width: 100px;
+  height: 100px;
+  background-color: #00FF00;
+}
+
+.centered {
+  position: relative;
+  left: 0;
+  top: calc(50% - 0.5em);
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}

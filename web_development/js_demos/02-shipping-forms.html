@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="ascii">
+  <style>
+    .error {font-weight: bold; color: red}
+  </style>
+</head>
+<body>
+
+<h2>Billing Address</h2>
+<form id="billing">
+  Name:<br>
+  <input  class="name" type="text" id="Name" placeholder="John"><br>
+  Address:<br>
+  <input type="text" name="addr" placeholder="2115 53RD ST SE"><br>
+  City:<br>
+  <input type="text" name="city" placeholder="Holand"><br>
+  State:<br>
+  <input type="text" name="state" placeholder="MI"><br>
+  Zip:<br>
+  <input type="number" name="zip" placeholder="45670"><br>
+</form>
+
+<h2>Shipping Address</h2>
+<form id="shippingSame">
+  <input type="checkbox" checked="checked" name="sameadr" id="addrCheckbox" onchange="toggleAddrSame()">
+  Shipping address same as billing<br>
+</form>
+<br>
+<form id="shipping">
+  Name:<br>
+  <input class="name" type="text" id="Name" placeholder="John"><br>
+  Address:<br>
+  <input type="text" name="addr" placeholder="2115 53RD ST SE"><br>
+  City:<br>
+  <input type="text" name="city" placeholder="Holand"><br>
+  State:<br>
+  <input type="text" name="state" placeholder="MI"><br>
+  Zip:<br>
+  <input type="number" name="zip" placeholder="45670"><br>
+</form>
+
+<script type="text/javascript">
+  function toggleAddrSame () {
+    var checked = document.getElementById("addrCheckbox").checked;
+    if (checked) {
+      copyInputs("billing", "shipping");
+      enableDisableInputs("shipping", false);
+    }
+    else {
+      enableDisableInputs("shipping", true);
+    }
+  }
+
+  function copyInputs(srcFormId, dstFromId) {
+    var srcInputs = document.getElementById(srcFormId).getElementsByTagName("input");
+    var dstInputs = document.getElementById(dstFromId).getElementsByTagName("input");
+    for (var i = 0; i < srcInputs.length; i++) {
+      // super inefficient, I know
+      for (var j = 0; j < dstInputs.length; j++) {
+        if (srcInputs[i].name === dstInputs[i].name) {
+          dstInputs[i].value = srcInputs[i].value;
+        }
+      }
+    }
+  }
+
+  function enableDisableInputs(formId, enable) {
+    var inputs = document.getElementById(formId).getElementsByTagName("input");
+    for (var i = 0; i < inputs.length; i++) {
+      inputs[i].disabled = !enable;
+    }
+  }
+</script>
+
+</body>
+</html>

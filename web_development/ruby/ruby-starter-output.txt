@@ -1,0 +1,78 @@
+Script started on 2019-01-20 15:09:42-0500
+
+kevin@KK-0 [~/gradschool/webdev/hw]
+$ ./02-ruby-starter.rb
+Problem 1:
+Hello, World
+
+Problem 2:
+Index of 'World' is 7
+
+Problem 3:
+This is funny monkey #1!
+This is funny monkey #2!
+This is funny monkey #3!
+This is funny monkey #4!
+This is funny monkey #5!
+This is funny monkey #6!
+This is funny monkey #7!
+This is funny monkey #8!
+This is funny monkey #9!
+This is funny monkey #10!
+This is funny monkey #1!
+This is funny monkey #2!
+This is funny monkey #3!
+This is funny monkey #4!
+This is funny monkey #5!
+This is funny monkey #6!
+This is funny monkey #7!
+This is funny monkey #8!
+This is funny monkey #9!
+This is funny monkey #10!
+This is funny monkey #1!
+This is funny monkey #2!
+This is funny monkey #3!
+This is funny monkey #4!
+This is funny monkey #5!
+This is funny monkey #6!
+This is funny monkey #7!
+This is funny monkey #8!
+This is funny monkey #9!
+This is funny monkey #10!
+
+Problem 4:
+Guess at a number between 1 and 1000:
+500
+Too low.
+750
+Too low.
+875
+Too low.
+940
+Too high.
+910
+Too high.
+890
+Too high.
+882
+Too high.
+879
+You get a surprise of your choice! Do you want a smiley face or an emoji?
+smiley
+Good choice!
+:)
+
+Problem 5:
+[String, Integer, Symbol, Float, String, TrueClass, Array]
+
+Problem 6:
+[String, Integer, Symbol, Float, String, TrueClass, Array]
+
+Problem 7:
+{"percussion"=>2, "woodwind"=>3, "brass"=>2, "strings"=>2}
+
+kevin@KK-0 [~/gradschool/webdev/hw]
+$ exit
+exit
+
+Script done on 2019-01-20 15:10:40-0500

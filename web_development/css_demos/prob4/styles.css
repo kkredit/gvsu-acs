@@ -1,0 +1,15 @@
+div {
+  /* Requirement: "The boxes are 100px wide"
+   *   It is unclear whether that is supposed to include the border.
+   *   I am taking the simple interpretation. */
+  width: 100px;
+
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+.redbox{border: 10px solid red; background-color: pink}
+.yellowbox{border: 10px solid yellow; background-color: lightyellow}
+.greenbox{border: 10px solid green; background-color: lightgreen}

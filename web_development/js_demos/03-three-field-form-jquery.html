@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="ascii">
+  <style>
+    .error {font-weight: bold; color: red}
+  </style>
+</head>
+<body>
+
+<h2>HTML Form Validation</h2>
+
+<form id="myform">
+  Name:<br>
+  <input type="text" name="name" value="" maxlength="24" required><br>
+  Age:<br>
+  <input type="text" name="age" value="" required><br>
+  Gender:<br>
+  <input type="radio" name="gender" value="male"> Male
+  <input type="radio" name="gender" value="female"> Female
+  <label for="gender" class="error">Please select your gender</label><br>
+  <br>
+  <input type="submit" value="Submit">
+</form>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/additional-methods.min.js"></script>
+<script>
+  // just for the demos, avoids form submit
+  jQuery.validator.setDefaults({
+    debug: true,
+    success: "valid"
+  });
+  $( "#myform" ).validate({
+    rules: {
+      gender: {
+        required: true
+      },
+      age: {
+        number: true
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
