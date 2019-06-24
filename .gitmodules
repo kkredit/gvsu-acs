@@ -25,3 +25,6 @@
 [submodule "web_development/slp-therapy-tracker-rails"]
 	path = web_development/slp-therapy-tracker-rails
 	url = https://github.com/kkredit/slp-therapy-tracker-backend
+[submodule "security_privacy/rogue-switch-detection-paper"]
+	path = security_privacy/rogue-switch-detection-paper
+	url = https://github.com/kkredit/rogue-switch-detection-paper
