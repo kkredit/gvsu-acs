@@ -11,13 +11,15 @@ If you are a current GVSU student, it is your responsibility to maintain academi
 
 The class names correspond to the following GVSU CIS course numbers:
 
-| Name | Course # |
-|------|----------|
-| security_privacy | 616 |
-| distributed_systems | 656 |
-| mobile_app_dev | 657 |
-| web_development | 658 |
-| database_design | 673 |
+| Name                | Course # |
+| ------------------- | -------- |
+| security_principles | 615      |
+| security_privacy    | 616      |
+| secure_development  | 618      |
+| distributed_systems | 656      |
+| mobile_app_dev      | 657      |
+| web_development     | 658      |
+| database_design     | 673      |
 
 ## Why branch `main` instead of `master`?
 

@@ -28,3 +28,12 @@
 [submodule "security_privacy/rogue-switch-detection-paper"]
 	path = security_privacy/rogue-switch-detection-paper
 	url = https://github.com/kkredit/rogue-switch-detection-paper
+[submodule "secure_development/static-analysis-research-paper"]
+	path = secure_development/static-analysis-research-paper
+	url = https://github.com/kkredit/static-analysis-research-paper
+[submodule "secure_development/statick-docker"]
+	path = secure_development/statick-docker
+	url = https://github.com/kkredit/statick-docker
+[submodule "security_principles/smart-home-threat-model"]
+	path = security_principles/smart-home-threat-model
+	url = https://github.com/kkredit/smart-home-threat-model
