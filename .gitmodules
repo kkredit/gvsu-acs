@@ -37,3 +37,6 @@
 [submodule "security_principles/smart-home-threat-model"]
 	path = security_principles/smart-home-threat-model
 	url = https://github.com/kkredit/smart-home-threat-model
+[submodule "security_principles/incident-response-procedure"]
+	path = security_principles/incident-response-procedure
+	url = https://github.com/kkredit/incident-response-procedure
