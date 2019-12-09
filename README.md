@@ -1,4 +1,3 @@
-
 ## Purpose of this repo
 
 I am a masters student taking GVSU's Computing and Information Systems (CIS)
@@ -20,6 +19,7 @@ The class names correspond to the following GVSU CIS course numbers:
 | mobile_app_dev      | 657      |
 | web_development     | 658      |
 | database_design     | 673      |
+| thesis              | 690-5    |
 
 ## Why branch `main` instead of `master`?
 

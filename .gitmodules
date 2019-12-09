@@ -40,3 +40,6 @@
 [submodule "security_principles/incident-response-procedure"]
 	path = security_principles/incident-response-procedure
 	url = https://github.com/kkredit/incident-response-procedure
+[submodule "thesis/gvsu-thesis-template"]
+	path = thesis/gvsu-thesis-template
+	url = https://github.com/kkredit/thesis-template
