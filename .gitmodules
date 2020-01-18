@@ -43,3 +43,6 @@
 [submodule "thesis/gvsu-thesis-template"]
 	path = thesis/gvsu-thesis-template
 	url = https://github.com/kkredit/thesis-template
+[submodule "programming_languages"]
+	path = programming_languages
+	url = https://github.com/kkredit/pl-study
