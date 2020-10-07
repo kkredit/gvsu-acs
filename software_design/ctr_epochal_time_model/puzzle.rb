@@ -59,10 +59,9 @@ end
 
 # A Puzzle is an identity
 #   initialize() is an special process event which creates the identity
-#   solve() is a process event
-#   print_solution() is an observation for the console
-#   solution() is an observation for the caller
-#   next_states() is a process event
+#   solve(states) is a process event
+#   solution(states) is an observation
+#   next_states(states) is a process event
 #   possible_moves() is a process event
 class Puzzle
   def initialize(options)
@@ -70,37 +69,31 @@ class Puzzle
     # @possible_moves is a value that comprises part of a Puzzle's state
     @possible_moves = possible_moves(options[:capacity])
 
-    # @states is itself an identity that comprises part of a Puzzle's state
-    #   it is processed many times by next_states() in the solve() method
-    @states = [State.new(
+    # @init_state is a value that comprises part of a Puzzle's state
+    @init_state = State.new(
       Side.new(options[:brewers], options[:drinkers]),
       Side.new(0, 0),
       true,
       []
-    )]
+    )
   end
 
-  def solve
+  def solve(states = [@init_state])
     # This is the heart of the Epochal Time Model cycle:
-    #   1. Identity Puzzle begins with state @states
-    #   2. @states progresses to its next value via the pure next_states() processing event
-    #   3. Cycle is repeated until a solution or dead end is observed in the state
-    @states = next_states until !solution.nil? || @states.none?
-    self
-  end
-
-  def print_solution
-    solution.print_moves unless solution.nil?
+    #   1. Identity Puzzle begins with state `[@init_state]`
+    #   2. `states` progresses to its next value via the pure next_states() processing event
+    #   3. Cycle is repeated until a dead end or a solution is observed in `states`
+    states.none? ? nil : solution(states) || solve(next_states(states))
   end
 
   private
 
-  def solution
-    @states.select {|s| s.solved?}.first
+  def solution(states)
+    states.select {|s| s.solved?}.first
   end
 
-  def next_states
-    @states.flat_map {|s| @possible_moves.map {|m| s.apply_move(m)}}
+  def next_states(states)
+    states.flat_map {|s| @possible_moves.map {|m| s.apply_move(m)}}
       .compact
       .uniq {|s| [s.start, s.dest]}
   end

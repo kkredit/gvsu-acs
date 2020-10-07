@@ -16,6 +16,9 @@ Specifically you will:
 
 ## Updated Solution Discussion
 
+Updating my previous solution to use the Epochal Time Model was greatly eased by the fact that I was already treating
+almost all data as immutable.
+
 <!--
 - Positive and negative impacts to design
   - Fortunately didn't take much work since I was already treating data structures as immutable (though I didn't go as

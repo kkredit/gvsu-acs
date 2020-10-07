@@ -19,5 +19,5 @@ end
 # This line combines three steps:
 #   1. Initialze a Puzzle identity
 #   2. Advance the Puzzle's state using the solve() process event
-#   3. Observe the Puzzle's state using the print_solution() observation
-Puzzle.new(options).solve.print_solution
+#   3. Observe the Puzzle's solution using the print_moves() observation
+Puzzle.new(options).solve&.print_moves
