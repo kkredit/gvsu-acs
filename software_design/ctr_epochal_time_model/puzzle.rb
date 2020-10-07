@@ -82,7 +82,7 @@ class Puzzle
     # This is the heart of the Epochal Time Model cycle:
     #   1. Identity Puzzle begins with state `[@init_state]`
     #   2. `states` progresses to its next value via the pure next_states() processing event
-    #   3. Cycle is repeated until a dead end or a solution is observed in `states`
+    #   3. Recur until a dead end or a solution is observed in `states`
     states.none? ? nil : solution(states) || solve(next_states(states))
   end
 
