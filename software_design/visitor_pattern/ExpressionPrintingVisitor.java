@@ -1,66 +1,62 @@
-
 public class ExpressionPrintingVisitor implements ExpressionVisitorInterface {
 
-    String expressionString;
-    
-    public ExpressionPrintingVisitor() {
+  String expressionString;
 
-        expressionString = new String();
-    }
-    
-    @Override
-    public String toString() {
+  public ExpressionPrintingVisitor() { expressionString = new String(); }
 
-        return expressionString;
-    }
-    
-    @Override
-    public void visit(Addition addition) {
+  @Override
+  public String toString() {
 
-        addition.leftExpression.accept(this);
-        String leftValue = expressionString;
-        addition.rightExpression.accept(this);
-        String rightValue = expressionString;
-        
-        expressionString = "(" + leftValue + "+" + rightValue + ")";
-    }
+    return expressionString;
+  }
 
-    @Override
-    public void visit(Subtraction subtraction) {
+  @Override
+  public void visit(Addition addition) {
 
-        subtraction.leftExpression.accept(this);
-        String leftValue = expressionString;
-        subtraction.rightExpression.accept(this);
-        String rightValue = expressionString;
-        
-        expressionString = "(" + leftValue + "-" + rightValue + ")";
-    }
+    addition.leftExpression.accept(this);
+    String leftValue = expressionString;
+    addition.rightExpression.accept(this);
+    String rightValue = expressionString;
 
-    @Override
-    public void visit(Multiplication multiplication) {
+    expressionString = "(" + leftValue + "+" + rightValue + ")";
+  }
 
-        multiplication.leftExpression.accept(this);
-        String leftValue = expressionString;
-        multiplication.rightExpression.accept(this);
-        String rightValue = expressionString;
-        
-        expressionString = "(" + leftValue + "*" + rightValue + ")";
-    }
+  @Override
+  public void visit(Subtraction subtraction) {
 
-    @Override
-    public void visit(Division division) {
+    subtraction.leftExpression.accept(this);
+    String leftValue = expressionString;
+    subtraction.rightExpression.accept(this);
+    String rightValue = expressionString;
 
-        division.leftExpression.accept(this);
-        String leftValue = expressionString;
-        division.rightExpression.accept(this);
-        String rightValue = expressionString;
-        
-        expressionString = "(" + leftValue + "/" + rightValue + ")";
-    }
+    expressionString = "(" + leftValue + "-" + rightValue + ")";
+  }
 
-    @Override
-    public void visit(Literal literal) {
+  @Override
+  public void visit(Multiplication multiplication) {
 
-        expressionString = Double.toString(literal.value);
-    }
+    multiplication.leftExpression.accept(this);
+    String leftValue = expressionString;
+    multiplication.rightExpression.accept(this);
+    String rightValue = expressionString;
+
+    expressionString = "(" + leftValue + "*" + rightValue + ")";
+  }
+
+  @Override
+  public void visit(Division division) {
+
+    division.leftExpression.accept(this);
+    String leftValue = expressionString;
+    division.rightExpression.accept(this);
+    String rightValue = expressionString;
+
+    expressionString = "(" + leftValue + "/" + rightValue + ")";
+  }
+
+  @Override
+  public void visit(Literal literal) {
+
+    expressionString = Double.toString(literal.value);
+  }
 }

@@ -1,20 +1,16 @@
-
 public class Addition implements ExpressionInterface {
 
-    ExpressionInterface leftExpression;
-    ExpressionInterface rightExpression;
-    
-    public Addition(ExpressionInterface leftExpression,
-                    ExpressionInterface rightExpression) {
-        
-        this.leftExpression = leftExpression;
-        this.rightExpression = rightExpression;
-    }
+  ExpressionInterface leftExpression;
+  ExpressionInterface rightExpression;
 
-    @Override
-    public void accept(ExpressionVisitorInterface visitor) {
+  public Addition(ExpressionInterface leftExpression,
+                  ExpressionInterface rightExpression) {
+    this.leftExpression = leftExpression;
+    this.rightExpression = rightExpression;
+  }
 
-        visitor.visit(this);
-    }
-
+  @Override
+  public void accept(ExpressionVisitorInterface visitor) {
+    visitor.visit(this);
+  }
 }

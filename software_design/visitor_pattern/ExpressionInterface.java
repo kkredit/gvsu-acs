@@ -1,5 +1,3 @@
-
 public interface ExpressionInterface {
-
-    public void accept(ExpressionVisitorInterface visitor);
+  public void accept(ExpressionVisitorInterface visitor);
 }
