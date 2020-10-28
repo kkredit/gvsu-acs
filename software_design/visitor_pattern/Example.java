@@ -9,10 +9,15 @@ public class Example {
 
     ExpressionExecutionVisitor executionVisitor = null;
     ExpressionPrintingVisitor printVisitor = null;
+    ExpressionPrefixPrintingVisitor prefixPrintVisitor = null;
 
     expression.accept(executionVisitor = new ExpressionExecutionVisitor());
     expression.accept(printVisitor = new ExpressionPrintingVisitor());
-    System.out.println(printVisitor + " = " +
+    expression.accept(prefixPrintVisitor = new ExpressionPrefixPrintingVisitor());
+
+    System.out.println("Infix: " + printVisitor + " = " +
+                       executionVisitor.getComputedValue());
+    System.out.println("Prefix: " + prefixPrintVisitor + " = " +
                        executionVisitor.getComputedValue());
   }
 }
