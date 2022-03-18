@@ -2,8 +2,7 @@
 
 ## Purpose of this repo
 
-I am a masters student enrolled in GVSU's Applied Computer Science (formerly Computing and Information Systems) program.
-This is a repository of projects I have worked on in my classes.
+I am a graduate of GVSU's Applied Computer Science program. This is a repository of projects I have worked on in my classes.
 
 I see this as a reference for my future self as well as a modest coding resume. If you are a current GVSU student, it is
 your responsibility to maintain academic honesty.
